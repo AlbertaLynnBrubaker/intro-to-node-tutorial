@@ -1,10 +1,10 @@
+const exp = require('constants')
 const express = require('express')
 const app = express()
 const path = require('path')
 const PORT = process.env.PORT || 3500
 
 // Route Handlers
-
 app.get('^/$|index(.html)?', (req, res) => {
     // res.sendFile('./views/index.html', { root: __dirname })
     res.sendFile(path.join(__dirname, 'views', 'index.html'))
